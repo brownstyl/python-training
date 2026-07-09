@@ -11,8 +11,17 @@ print(small_letter("HELLO WORLD"))
 #===============string maipulation================#
 def cap(input: str) -> str:
     data = open(input, "r")
+    try:
+        data = open(input, "r")
+    except:
+        print("file does not exist")
+        return ""
+
     info = data.read()
     data.close()
+
+
+    join = info
 
     byte_convo = info.split()
     for i in range(len(byte_convo)):
@@ -29,7 +38,8 @@ def cap(input: str) -> str:
     writeout = open("result.txt", "w")
     writeout.write(join)
     writeout.close()
+    
     return join
 
 
-print(cap("file.txt"))
+print(cap("files.txt"))
