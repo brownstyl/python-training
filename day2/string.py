@@ -10,11 +10,10 @@ print(small_letter("HELLO WORLD"))
 
 #===============string maipulation================#
 def cap(input: str) -> str:
-    data = open(input, "r")
     try:
         data = open(input, "r")
     except:
-        print("file does not exist")
+        print("your file does not exist, please check back and try again later.")
         return ""
 
     info = data.read()
@@ -42,4 +41,4 @@ def cap(input: str) -> str:
     return join
 
 
-print(cap("files.txt"))
+cap("files.txt")
