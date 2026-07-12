@@ -1,11 +1,11 @@
 import time
-
+import getpass
 def password():
     correct_pass = "brown"
     count = 0
 
     while True:
-        user_input = input("please enter your password: ")
+        user_input = getpass.getpass("please enter your password: ")
 
         if user_input == correct_pass:
             print("Successfully logged into your account!!...")
@@ -19,9 +19,9 @@ def password():
             if count == 3:
                 print(f"you have entered password for {count} times now!! \nplease wait for 2 mins and try again later")
 
-                time.sleep(10)
+                time.sleep(3)
                 count = 0
-                print(f"\nyou can now try {count} times again\n")
+                print("\nyou can now try 3 times again\n")
                 
 
 password()
