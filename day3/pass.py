@@ -1,5 +1,6 @@
 import time
 import getpass
+
 def password():
     correct_pass = "brown"
     count = 0
@@ -17,7 +18,7 @@ def password():
 
             count += 1
             if count == 3:
-                print(f"you have entered password for {count} times now!! \nplease wait for 2 mins and try again later")
+                print(f"you have entered password for {count} times now!! \nplease wait for 2 sec and try again later")
 
                 time.sleep(3)
                 count = 0
