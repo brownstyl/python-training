@@ -9,6 +9,7 @@ def Divide(a, b):
         return 0
     else:
         return a/b
+
     
 def main():
     first = input("Provide First number: ")
