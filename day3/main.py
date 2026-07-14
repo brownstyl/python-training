@@ -19,8 +19,23 @@ print(sep)
 ai_model["version"] = 3
 ai_model["status"]= "Active"
 print(ai_model)
+print()
+
+new_score = ai_model["score"]
+calc_score = [x*100 for x in new_score]
+print(calc_score)
 
 print()
+
+#using functio to wrap it up#
+def calculate_scores(modeh_dic):
+    score_in_list = modeh_dic["score"]
+    comprehension_cal = [x*100 for x in score_in_list]
+    return comprehension_cal
+
+percentage = calculate_scores(ai_model)
+print("final scores", percentage)
+
 
 #====== using the list comprehension way to change the list=====#
 cal = [1, 2, 3]

@@ -18,6 +18,8 @@ def password():
 
             count += 1
             if count == 3:
+                print()
+                print("=====Notice=====")
                 print(f"you have entered password for {count} times now!! \nplease wait for 2 sec and try again later")
 
                 time.sleep(3)
