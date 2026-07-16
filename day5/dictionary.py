@@ -41,11 +41,25 @@ from collections import defaultdict
 
 my_string = "the name of my school is leefcenter"
 
-my_map= defaultdict(int)
+clean_string = my_string.replace(" ", "")
 
-for char in my_string:
+my_map = defaultdict(int)
+
+for char in clean_string:
 	my_map[char] += 1
 	
 for key, value in my_map.items():
 	print(key, "--", value)
 
+print("=============================================================")
+
+student_grades = {"Gabriel": 200, "Alice": 95, "Bob": 45, "Charlie": 120}
+processed_data = {score + 5: name for name, score in student_grades.items() if score >= 100}
+print(processed_data)
+
+#====================or in this way===========# 
+for key, score in student_grades.items():
+	if score >= 100:
+		score += 5
+		print(score, key)
+		
