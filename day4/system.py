@@ -50,3 +50,43 @@ def reverse_robust_string(s: str) -> str:
 w = "hello"
 
 print(reverse_robust_string(w))
+
+
+#==========deciding a palindrom========#
+
+def palindrome(s: str) -> bool:
+    x = 0
+    y = len(s)-1
+    w = s.lower()
+
+    while x < y:
+        if w[x] == " ":
+            x += 1
+            continue
+        if w[y] == " ":
+            y -= 1
+            continue
+
+        if w[x] != w[y]:
+            return False
+        x += 1
+        y -= 1
+    return True
+
+def main():
+    st = "M ada      m"
+    print(palindrome(st))
+
+main()
+print()
+
+#======reversing sentence======#
+
+def reverse_sentence(s: str) -> str:
+    st = s.split()
+    for i in st:
+
+        return i[::-1]
+
+
+print(reverse_sentence("the sky is blue"))
