@@ -83,10 +83,16 @@ print()
 #======reversing sentence======#
 
 def reverse_sentence(s: str) -> str:
-    st = s.split()
-    for i in st:
+    for char in s:
+        if char == "!" or char == "," or char == ":" or char == "@" or char == ";":
+            continue
+        char = s.split()
+        print(char)
+        reverse = char[::-1]
 
-        return i[::-1]
+        return " ".join(reverse)
+
+   
 
 
-print(reverse_sentence("the sky is blue"))
+print(reverse_sentence("the! , sky is blue"))
