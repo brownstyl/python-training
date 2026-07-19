@@ -18,7 +18,6 @@ def run():
     try:
         note = input("enter (continue) to proceed else enter (exit) to terminate: ")
         
-
         print()
         while note.lower() == "continue":
 
@@ -26,21 +25,19 @@ def run():
             text = input("input text: ") 
             print()
             return op[mode](text)
-        
-    
+                             
+
         else:
-            while True:
+           
+            while note.lower() == "exit":
+                    return "thank you for banking with us..."
+                    
+            else:
                 if note.lower() != "continue" or "exit":
-                    print("you can only select from the available option (continue or exit) only")
-                    break
-                else:
-                    if note.lower() == "exit":
-                        print("thank you for banking with us...")
-                        exit()
-        
+                    return "you can only select from the available option (continue or exit) only"
     
     except KeyError:
-        print(f"the key {mode} doesn't exist, please try again...")
+       return print(f"the key {mode} doesn't exist, please try again...")
 
 
 print("=============call back function test============")
