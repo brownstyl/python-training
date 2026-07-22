@@ -1,0 +1,29 @@
+#by sorting in decending order, the heighest number becomes the first index, which is index[0] and 
+#follow by the second largest number which will now be at index[1] and so on...
+
+def second_largest():
+    lst = [4, 3, 7, 2]
+    unique_list = list(set(lst))
+    unique_list.sort(reverse=True)
+    
+    
+    return unique_list[1]
+    
+print(second_largest())
+
+#removing duplicate......
+print("===========removing duplicate=========")
+sorting = [2, 5, 3, 4, 4, 5, 6, 4, 5 ,1, 2]
+modified_list = list(set(sorting))
+join_list = " ".join(map(str, modified_list))
+print(join_list)
+
+#list comprehension....
+#cleaning mail.....
+print("================cleaning mail==================")
+user_emails = [" USER1@gmail.com ", "User2@Yahoo.com  ", "  admin@company.com"]
+clean_mail = [email.strip().lower() for email in user_emails]
+
+print(clean_mail)
+
+
