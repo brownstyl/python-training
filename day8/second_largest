@@ -22,8 +22,12 @@ print(join_list)
 #cleaning mail.....
 print("================cleaning mail==================")
 user_emails = [" USER1@gmail.com ", "User2@Yahoo.com  ", "  admin@company.com"]
+
+#strip helps remove trailing spaces for both back and front.
 clean_mail = [email.strip().lower() for email in user_emails]
 
 print(clean_mail)
+
+
 
 
